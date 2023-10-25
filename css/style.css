@@ -254,7 +254,7 @@ body {
 }
 
 .no-webp .header{
-  background: url("../img/header/background.jpg") center/cover no-repeat; }
+  background: url("../img/header/background.jpg") 0 0/cover no-repeat; }
 
 .header {
   padding-top: 6.125rem;
