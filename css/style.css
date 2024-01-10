@@ -832,7 +832,9 @@ textarea.input {
 }
 
 .about__container {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .about__label:not(:last-child) {
@@ -863,14 +865,16 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   gap: 1.4375rem;
-  max-width: 45%;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
 }
 
 .about__image-ibg {
-  max-width: 15.3125rem;
-  width: 100%;
-  height: 27.625rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  aspect-ratio: 243/442;
   overflow: hidden;
 }
 
@@ -882,6 +886,10 @@ textarea.input {
   transition: -webkit-transform 500ms ease 0s;
   transition: transform 500ms ease 0s;
   transition: transform 500ms ease 0s, -webkit-transform 500ms ease 0s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__learn {
@@ -897,8 +905,8 @@ textarea.input {
           justify-content: space-between;
   gap: 1.25rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%;
 }
 
 .about__learn-about-wrap {
@@ -906,6 +914,8 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -939,14 +949,9 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .about__item {
@@ -957,10 +962,11 @@ textarea.input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .about__insights-numb {
@@ -1016,9 +1022,11 @@ textarea.input {
   transition: transform 500ms ease 0s, -webkit-transform 500ms ease 0s;
 }
 
+.no-webp .blending__image-ibg::before{
+  background: url("../img/blending/pic_01.jpg") center/cover no-repeat; }
+
 .blending__image-ibg::before {
   content: "";
-  background: url("../img/blending/pic_01.webp") center/cover no-repeat;
   position: absolute;
   top: calc(50% - 217px);
   right: 0;
@@ -1120,6 +1128,9 @@ textarea.input {
           flex: 0 0 3.4375rem;
   width: 3.4375rem;
   aspect-ratio: 1/1;
+  filter: grayscale(92%);
+  -webkit-filter: grayscale(92%);
+  -moz-filter: grayscale(92%);
 }
 
 .team__rating-person:not(:first-child) {
@@ -1177,8 +1188,15 @@ textarea.input {
   grid-template-rows: 1fr;
 }
 
+.team__brand {
+  aspect-ratio: 255/98;
+}
+
 .team__brand img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 ._watcher-view.team__title {
@@ -1301,8 +1319,15 @@ textarea.input {
   grid-template-rows: 1fr;
 }
 
+.images__item {
+  aspect-ratio: 480/515;
+}
+
 .images__item img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog__label {
@@ -1582,10 +1607,6 @@ textarea.input {
     gap: 1.4375rem;
   }
 
-  .about__insights {
-    gap: 4.875rem;
-  }
-
   .about__item {
     gap: 0.9375rem;
   }
@@ -1814,10 +1835,6 @@ textarea.input {
     gap: 0.9375rem;
   }
 
-  .about__insights {
-    gap: 0.9375rem;
-  }
-
   .about__item {
     gap: 0.3125rem;
   }
@@ -1941,24 +1958,6 @@ textarea.input {
 }
 
 @media (max-width: 59.74875em) {
-  .about__info-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .about__image-wrap {
-    max-width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
-  .about__image-ibg {
-    max-width: 100%;
-  }
-
   .about__learn-about-wrap {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -2060,6 +2059,13 @@ textarea.input {
     text-align: center;
   }
 
+  .about__info-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .blending__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -2157,30 +2163,13 @@ textarea.input {
             flex-direction: column;
   }
 
-  .about__learn {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  .about__learn-about-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .about__image-ibg {
+    aspect-ratio: 243/342;
   }
 
   .about__button {
     -ms-flex-item-align: start;
         align-self: flex-start;
-  }
-
-  .about__insights {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 
   .form {
@@ -2563,18 +2552,6 @@ textarea.input {
     }
 }
 
-@supports (gap: clamp( 0.9375rem , -0.5448529412rem  +  7.4117647059vw , 4.875rem )) {
-    .about__insights {
-      gap: clamp( 0.9375rem , -0.5448529412rem  +  7.4117647059vw , 4.875rem );
-    }
-}
-
-@supports not (gap: clamp( 0.9375rem , -0.5448529412rem  +  7.4117647059vw , 4.875rem )) {
-    .about__insights {
-      gap: calc(0.9375rem + 3.9375 * (100vw - 20rem) / 53.125);
-    }
-}
-
 @supports (gap: clamp( 0.3125rem , 0.0772058824rem  +  1.1764705882vw , 0.9375rem )) {
     .about__item {
       gap: clamp( 0.3125rem , 0.0772058824rem  +  1.1764705882vw , 0.9375rem );
@@ -2936,3 +2913,5 @@ textarea.input {
 }
 
 .webp .hero{ background: url(../img/hero/bg.webp) center/cover no-repeat; }
+
+.webp .blending__image-ibg::before{ background: url(../img/blending/pic_01.webp) center/cover no-repeat; }
