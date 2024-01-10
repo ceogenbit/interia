@@ -659,6 +659,7 @@ textarea.input {
           flex: 0 1 23.125rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 1.25rem;
   border-right: 0.0625rem solid var(--line);
 }
 
@@ -1561,10 +1562,6 @@ textarea.input {
     padding-bottom: 9.875rem;
   }
 
-  .footer__socials {
-    gap: 1.25rem;
-  }
-
   .footer__part-last {
     padding-top: 3.125rem;
   }
@@ -1776,9 +1773,9 @@ textarea.input {
   }
 
   .footer__items {
-    -webkit-column-gap: 0.9375rem;
-       -moz-column-gap: 0.9375rem;
-            column-gap: 0.9375rem;
+    -webkit-column-gap: 1.5625rem;
+       -moz-column-gap: 1.5625rem;
+            column-gap: 1.5625rem;
   }
 
   .footer__part-down {
@@ -1787,10 +1784,6 @@ textarea.input {
 
   .footer__part-down {
     padding-bottom: 1.25rem;
-  }
-
-  .footer__socials {
-    gap: 0.625rem;
   }
 
   .footer__part-last {
@@ -1802,9 +1795,9 @@ textarea.input {
   }
 
   .footer__privacy-items {
-    -webkit-column-gap: 0.9375rem;
-       -moz-column-gap: 0.9375rem;
-            column-gap: 0.9375rem;
+    -webkit-column-gap: 1.875rem;
+       -moz-column-gap: 1.875rem;
+            column-gap: 1.875rem;
   }
 
   .footer__privacy-item {
@@ -2376,19 +2369,19 @@ textarea.input {
     }
 }
 
-@supports ((-moz-column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem )) or (column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem ))) {
+@supports ((-moz-column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem )) or (column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem ))) {
     .footer__items {
-      -webkit-column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem );
-         -moz-column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem );
-              column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem );
+      -webkit-column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem );
+         -moz-column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem );
+              column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem );
     }
 }
 
-@supports not ((-moz-column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem )) or (column-gap: clamp( 0.9375rem , -0.0036764706rem  +  4.7058823529vw , 3.4375rem ))) {
+@supports not ((-moz-column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem )) or (column-gap: clamp( 1.5625rem , 0.8566176471rem  +  3.5294117647vw , 3.4375rem ))) {
     .footer__items {
-      -webkit-column-gap: calc(0.9375rem + 2.5 * (100vw - 20rem) / 53.125);
-         -moz-column-gap: calc(0.9375rem + 2.5 * (100vw - 20rem) / 53.125);
-              column-gap: calc(0.9375rem + 2.5 * (100vw - 20rem) / 53.125);
+      -webkit-column-gap: calc(1.5625rem + 1.875 * (100vw - 20rem) / 53.125);
+         -moz-column-gap: calc(1.5625rem + 1.875 * (100vw - 20rem) / 53.125);
+              column-gap: calc(1.5625rem + 1.875 * (100vw - 20rem) / 53.125);
     }
 }
 
@@ -2416,18 +2409,6 @@ textarea.input {
     }
 }
 
-@supports (gap: clamp( 0.625rem , 0.3897058824rem  +  1.1764705882vw , 1.25rem )) {
-    .footer__socials {
-      gap: clamp( 0.625rem , 0.3897058824rem  +  1.1764705882vw , 1.25rem );
-    }
-}
-
-@supports not (gap: clamp( 0.625rem , 0.3897058824rem  +  1.1764705882vw , 1.25rem )) {
-    .footer__socials {
-      gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 53.125);
-    }
-}
-
 @supports (padding-top: clamp( 1.25rem , 0.5441176471rem  +  3.5294117647vw , 3.125rem )) {
     .footer__part-last {
       padding-top: clamp( 1.25rem , 0.5441176471rem  +  3.5294117647vw , 3.125rem );
@@ -2452,19 +2433,19 @@ textarea.input {
     }
 }
 
-@supports ((-moz-column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem )) or (column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem ))) {
+@supports ((-moz-column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem )) or (column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem ))) {
     .footer__privacy-items {
-      -webkit-column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem );
-         -moz-column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem );
-              column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem );
+      -webkit-column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem );
+         -moz-column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem );
+              column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem );
     }
 }
 
-@supports not ((-moz-column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem )) or (column-gap: clamp( 0.9375rem , -0.8272058824rem  +  8.8235294118vw , 5.625rem ))) {
+@supports not ((-moz-column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem )) or (column-gap: clamp( 1.875rem , 0.4632352941rem  +  7.0588235294vw , 5.625rem ))) {
     .footer__privacy-items {
-      -webkit-column-gap: calc(0.9375rem + 4.6875 * (100vw - 20rem) / 53.125);
-         -moz-column-gap: calc(0.9375rem + 4.6875 * (100vw - 20rem) / 53.125);
-              column-gap: calc(0.9375rem + 4.6875 * (100vw - 20rem) / 53.125);
+      -webkit-column-gap: calc(1.875rem + 3.75 * (100vw - 20rem) / 53.125);
+         -moz-column-gap: calc(1.875rem + 3.75 * (100vw - 20rem) / 53.125);
+              column-gap: calc(1.875rem + 3.75 * (100vw - 20rem) / 53.125);
     }
 }
 
